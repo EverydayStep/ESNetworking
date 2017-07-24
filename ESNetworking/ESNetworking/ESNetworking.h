@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface ESNetworking : NSObject
 
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
+
++ (ESNetworking *)networking;
+
+- (NSURLSessionDataTask *)postUrl:(NSString *)url params:(NSDictionary *)params success:(void(^)(NSURLSessionDataTask * task, id response))success fail:(void(^)(NSURLSessionDataTask * task, NSError *error))fail;
+
+- (NSURLSessionDataTask *)getUrl:(NSString *)url params:(NSDictionary *)params success:(void(^)(NSURLSessionDataTask * task, id response))success fail:(void(^)(NSURLSessionDataTask * task, NSError *error))fail;
+
+- (NSURLSessionDataTask *)putUrl:(NSString *)url params:(NSDictionary *)params success:(void(^)(NSURLSessionDataTask * task, id response))success fail:(void(^)(NSURLSessionDataTask * task, NSError *error))fail;
+
+- (NSURLSessionDataTask *)deleteUrl:(NSString *)url params:(NSDictionary *)params success:(void(^)(NSURLSessionDataTask * task, id response))success fail:(void(^)(NSURLSessionDataTask * task, NSError *error))fail;
 @end
