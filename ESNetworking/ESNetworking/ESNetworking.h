@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
+extern NSString * const ES_Network_Success;
+extern NSString * const ES_Network_Fail;
+
 @interface ESNetworking : NSObject
 
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;

@@ -8,6 +8,9 @@
 
 #import "ESNetworking.h"
 
+NSString * const ES_Network_Success = @"es_network_success";
+NSString * const ES_Network_Fail = @"es_network_fail";
+
 @interface ESNetworking()
 @end
 
